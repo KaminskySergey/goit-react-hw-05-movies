@@ -13,3 +13,63 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  
+}
+
+p{
+  margin: 0;
+  padding: 0;
+}
+section {
+    max-width: 1600px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.active{
+  color: red;
+  position: relative;
+  transition: 250ms;
+}
+
+
+
+.nav-link + .nav-link {
+  margin-left: 30px;
+}
+
+.active::before {
+  content: ''; /* Выводим пустое содержимое */
+    position: absolute; /* Абсолютное позиционирование */
+    background: red; /* Цвет линии */
+    left: 0; /* Положение линии слева */
+    bottom: -5px; /* Положение линии */
+    width: 100%; /* Линия на ширину текста */
+    height: 2px;
+}
