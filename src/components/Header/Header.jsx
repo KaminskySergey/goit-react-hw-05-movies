@@ -1,4 +1,3 @@
-import Box from "Box/Box";
 import Navigation from "components/Navigation/Navigation";
 import { HeaderCont } from "./Header.styled";
 
