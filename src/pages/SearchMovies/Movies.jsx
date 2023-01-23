@@ -8,7 +8,7 @@ const Movies = () => {
     const [moviesSearch, setMoviesSearch] = useState([])
     const [seachParams, setSearchParams] = useSearchParams()
 const query = seachParams.get('query') ?? '';
-
+    
 
     const handleSearchParams = value => {
         console.log(value);
@@ -24,8 +24,6 @@ const query = seachParams.get('query') ?? '';
             }
             const fetchDataSearch = async () => {
                 const {data} = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=102d4305e0abdbf0fd48836d5abb1978&language=en-US&page=1&include_adult=false&query=${query}`)
-                console.log(data.results);
-                
                 setMoviesSearch(data.results)
                 
             }
@@ -39,11 +37,12 @@ const query = seachParams.get('query') ?? '';
 console.log('We were unable to process your request');
         } 
     }, [query])
-    
+   
+    console.log(moviesSearch);
 return (
     <>
-    <MoviesSearch  handleSearchParams={handleSearchParams}/>
-    <MoviesList item={moviesSearch}/>
+    <MoviesSearch moviesSearch={moviesSearch}  handleSearchParams={handleSearchParams}/>
+     <MoviesList item={moviesSearch}/>
     </>
 )
 }

@@ -3,7 +3,6 @@ import { Form, Label, Input, Button } from "./MovieSearch.styled";
 
 const MoviesSearch = ({handleSearchParams}) => {
     const [value, setValue] = useState('')
-    
     const handleValue = (value) => {
         setValue(value);
         
@@ -15,6 +14,7 @@ const MoviesSearch = ({handleSearchParams}) => {
         setValue('')
         
     }
+    
     return (
         <>
         <Form onSubmit={handleSubmit}>

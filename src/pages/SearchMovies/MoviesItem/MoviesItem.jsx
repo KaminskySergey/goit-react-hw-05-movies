@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 
 const MoviesItem = ({item}) => {
-    console.log(item);
     const location = useLocation()
     return (
         <>
